@@ -33,12 +33,12 @@ int main(int argc, char *argv[])
 
 
     // 2.Yordam Önerisi
-    FinishTask *ftask = new FinishTask();
-    ftask->doJob(2);
-
-    // 3.Yordam Önerisi
     QThread *serialThread = new QThread;
     RenderEvent *rEvent = new RenderEvent(serialThread);
 
+    // 3.Yordam Önerisi
+    FinishTask *ftask = new FinishTask();
+    ftask->doJob(2);
+   
     return a.exec();
 }
